@@ -7,16 +7,19 @@ class Logic {
   double time = 0;
   double height = 0;
   double initialheight = 0;
+  String direction = "right";
 
   void setRef(WidgetRef ref) {
     _ref = ref;
   }
 
   void moveLeft() {
+    direction = "left";
     _ref.read(indexA.state).update((state) => state - 0.05);
   }
 
   void moveRight() {
+    direction = "right";
     _ref.read(indexA.state).update((state) => state + 0.05);
   }
 
@@ -27,7 +30,7 @@ class Logic {
 
   void moveUp() {
     preJump();
-    Timer.periodic(const Duration(milliseconds: 50), (timer) {
+    Timer.periodic(const Duration(microseconds: 50), (timer) {
       time += 0.05;
       height = -4.9 * time * time + 5 * time;
 

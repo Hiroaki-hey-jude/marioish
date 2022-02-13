@@ -25,6 +25,7 @@ class _HomePageState extends ConsumerState<HomePage> {
   Widget build(BuildContext context) {
     double indexX = ref.watch(indexA);
     double indexY = ref.watch(indexB);
+    
     return Scaffold(
       body: Column(
         children: [
@@ -35,7 +36,9 @@ class _HomePageState extends ConsumerState<HomePage> {
               child: AnimatedContainer(
                 alignment: Alignment(indexX, indexY),
                 duration: const Duration(seconds: 0),
-                child: const Mario(),
+                child: Mario(
+                  direction: _logic.direction,
+                ),
               ),
             ),
           ),
