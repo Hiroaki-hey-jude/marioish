@@ -15,27 +15,30 @@ class Logic {
 
   void moveLeft() {
     direction = "left";
-    _ref.read(indexA.state).update((state) => state - 0.05);
+    _ref.watch(indexA.state).update((state) => state - 0.05);
   }
 
   void moveRight() {
     direction = "right";
-    _ref.read(indexA.state).update((state) => state + 0.05);
+    _ref.watch(indexA.state).update((state) => state + 0.05);
   }
 
   void preJump() {
+    direction = "up";
+    //print(direction);
     time = 0;
-    initialheight = _ref.read(indexB);
+    initialheight = _ref.watch(indexB);
   }
 
   void moveUp() {
     preJump();
-    Timer.periodic(const Duration(microseconds: 50), (timer) {
+    Timer.periodic(const Duration(milliseconds: 50), (timer) {
       time += 0.05;
       height = -4.9 * time * time + 5 * time;
 
       if (initialheight - height > 1) {
         _ref.read(indexB.state).update((state) => 1);
+        timer.cancel();
       } else {
         _ref.read(indexB.state).update((state) => initialheight - height);
       }

@@ -5,11 +5,11 @@ import 'package:flutter/material.dart';
 class Mario extends StatelessWidget {
   final direction;
 
-  Mario({this.direction});
+  const Mario({this.direction});
 
   @override
   Widget build(BuildContext context) {
-    if (direction == "right") {
+    if (direction == "right" || direction == "up") {
       return SizedBox(
         width: 35,
         height: 35,
@@ -19,12 +19,17 @@ class Mario extends StatelessWidget {
       return Transform(
         alignment: Alignment.center,
         transform: Matrix4.rotationY(pi),
-        child: Container(
+        child: SizedBox(
           width: 35,
           height: 35,
           child: Image.asset('assets/mario.png'),
         ),
       );
     }
+    // return SizedBox(
+    //   width: 35,
+    //   height: 35,
+    //   child: Image.asset('assets/mario.png'),
+    // );
   }
 }

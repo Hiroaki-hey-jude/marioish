@@ -25,7 +25,7 @@ class _HomePageState extends ConsumerState<HomePage> {
   Widget build(BuildContext context) {
     double indexX = ref.watch(indexA);
     double indexY = ref.watch(indexB);
-    
+
     return Scaffold(
       body: Column(
         children: [
