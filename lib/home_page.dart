@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_game/button.dart';
+import 'package:flutter_game/jumping_mario.dart';
 import 'package:flutter_game/logic.dart';
 import 'package:flutter_game/mario.dart';
 import 'package:flutter_game/provider.dart';
@@ -36,9 +37,12 @@ class _HomePageState extends ConsumerState<HomePage> {
               child: AnimatedContainer(
                 alignment: Alignment(indexX, indexY),
                 duration: const Duration(seconds: 0),
-                child: Mario(
-                  direction: _logic.direction,
-                ),
+                child: _logic.jump
+                    ? JumpingMario(direction: _logic.direction)
+                    : Mario(
+                        direction: _logic.direction,
+                        run: _logic.run,
+                      ),
               ),
             ),
           ),
