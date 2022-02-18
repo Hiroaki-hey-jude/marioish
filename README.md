@@ -1,17 +1,25 @@
-# flutter_game
+# Flutter マリオゲーム
 
 ![mario](https://user-images.githubusercontent.com/76618285/154713889-364cf9f1-ceda-46f5-9556-e728d538ed0b.gif)
 
-## Getting Started
+## Overview
+ちょっとしたゲームっぽい物を作ってみたいと思いコードを書いてみた。
+まだ障害物とゴールの実装は完了してないがいずれ実装できるように頑張る。
+ジャンプ、右ダッシュ、左ダッシュは実装済み。
 
-This project is a starting point for a Flutter application.
+alightmentを使いオブジェクトを移動させる。
+右または左に移動したい時はX軸の数値を0.02ずつプラスしたりマイナスすることで移動可能にした。
+ジャンプもロジックとしては同じである。
 
-A few resources to get you started if this is your first Flutter project:
+## Requirement
+- macOS
+- Flutter 2.8.0
+- Dart 2.15.0
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
+## Usage
+ボタンを押していきたい方向に行くだけ。
 
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
-# marioish
+## Author
+Hiroaki Ueda
+
+
