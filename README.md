@@ -1,6 +1,6 @@
 # flutter_game
 
-![ 2022-01-28 1 20 03](https://user-images.githubusercontent.com/76618285/mario.gif)
+![mario](https://user-images.githubusercontent.com/76618285/154713889-364cf9f1-ceda-46f5-9556-e728d538ed0b.gif)
 
 ## Getting Started
 
