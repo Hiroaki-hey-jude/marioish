@@ -1,6 +1,6 @@
 # flutter_game
 
-A new Flutter project.
+![ 2022-01-28 1 20 03](https://user-images.githubusercontent.com/76618285/mario.gif)
 
 ## Getting Started
 
